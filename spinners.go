@@ -12,7 +12,6 @@ type spinner struct {
 	chars   []string
 	postfix string
 	prefix  string
-	text    string
 	halt    chan struct{}
 	delay   time.Duration
 }
