@@ -16,6 +16,8 @@ type spinner struct {
 	delay   time.Duration
 }
 
+// Many spinners are taken from cli-spinners
+// https://github.com/sindresorhus/cli-spinners
 func chars(name string) []string {
 	var chars []string
 	switch name {
@@ -98,8 +100,25 @@ func chars(name string) []string {
 		chars = strings.Split("←↖↑↗→↘↓↙", "")
 	case "arrow2", "arrows2":
 		chars = []string{"▹▹▹▹▹", "▸▹▹▹▹", "▹▸▹▹▹", "▹▹▸▹▹", "▹▹▹▸▹", "▹▹▹▹▸"}
+	case "star", "stars":
+		chars = strings.Split("✶✸✹✺✹✷", "")
+	case "star2", "stars2":
+		chars = strings.Split("+x*", "")
+	case "flip":
+		chars = strings.Split("___-``'´-___", "")
+	case "hamburger":
+		chars = strings.Split("☱☲☴", "")
+	case "vgrow":
+		chars = strings.Split("▁▃▄▅▆▇▆▅▄▃", "")
+	case "hgrow":
+		chars = strings.Split("▏▎▍▌▋▊▉▊▋▌▍▎", "")
 	case "cross":
 		chars = strings.Split("╫╪", "")
+	case "layer":
+		chars = strings.Split("-=≡", "")
+	case "granade":
+		chars = []string{"،   ", "′   ", " ´ ", " ‾ ", "  ⸌", "  ⸊", "  |", "  ⁎",
+			"  ⁕", " ෴ ", "  ⁓", "   ", "   ", "   "}
 	case "toggle1", "toggle":
 		chars = strings.Split("⊶⊷", "")
 	case "toggle2":
