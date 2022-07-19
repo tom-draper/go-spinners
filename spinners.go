@@ -26,19 +26,11 @@ func chars(name string) []string {
 	return chars
 }
 
-func spinnerText(args []string) string {
-	if len(args) > 0 {
-		return args[0]
-	}
-	return ""
-}
-
-func Spinner(name string, args ...string) *spinner {
-	text := spinnerText(args)
+func Spinner(name string) *spinner {
 	chars := chars(name)
 	return &spinner{
 		chars: chars,
-		text:  text,
+		text:  "",
 		halt:  make(chan struct{}, 1),
 		delay: time.Millisecond * 100,
 	}
