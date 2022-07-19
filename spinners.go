@@ -68,6 +68,8 @@ func chars(name string) []string {
 		chars = []string{"∙∙∙", "●∙∙", "∙●∙", "∙∙●", "∙∙∙"}
 	case "balloon":
 		chars = strings.Split(" .oO@*", "")
+	case "balloon2":
+		chars = strings.Split(".oO°Oo.", "")
 	case "noise":
 		chars = strings.Split("▓▒░", "")
 	case "bounce":
@@ -75,24 +77,53 @@ func chars(name string) []string {
 	case "bouncingball":
 		chars = []string{"( ●    )", "(  ●   )", "(   ●  )", "(    ● )", "(     ●)",
 			"(    ● )", "(   ●  )", "(  ●   )", "( ●    )", "(●     )"}
+	case "bouncingball2":
+		chars = []string{" ●    ", "  ●   ", "   ●  ", "    ● ", "     ●",
+			"    ● ", "   ●  ", "  ●   ", " ●    ", "●     "}
 	case "bouncingbar":
 		chars = []string{"[    ]", "[=   ]", "[==  ]", "[=== ]", "[ ===]", "[  ==]",
 			"[   =]", "[    ]", "[   =]", "[  ==]", "[ ===]", "[====]", "[=== ]",
 			"[==  ]", "[=   ]"}
 	case "boxbounce":
-		chars = []string{"▖▘▝▗", ""}
+		chars = strings.Split("▖▘▝▗", "")
 	case "boxbounce2":
-		chars = []string{"▌▀▐▄", ""}
+		chars = strings.Split("▌▀▐▄", "")
 	case "circlequarters":
-		chars = []string{"◴◷◶◵", ""}
+		chars = strings.Split("◴◷◶◵", "")
 	case "circlehalves":
-		chars = []string{"◐◓◑◒", ""}
+		chars = strings.Split("◐◓◑◒", "")
 	case "squarecorners":
-		chars = []string{"◰◳◲◱", ""}
+		chars = strings.Split("◰◳◲◱", "")
 	case "arrow", "arrows":
 		chars = strings.Split("←↖↑↗→↘↓↙", "")
 	case "arrow2", "arrows2":
 		chars = []string{"▹▹▹▹▹", "▸▹▹▹▹", "▹▸▹▹▹", "▹▹▸▹▹", "▹▹▹▸▹", "▹▹▹▹▸"}
+	case "cross":
+		chars = strings.Split("╫╪", "")
+	case "toggle1", "toggle":
+		chars = strings.Split("⊶⊷", "")
+	case "toggle2":
+		chars = strings.Split("▫▪", "")
+	case "toggle3":
+		chars = strings.Split("□■", "")
+	case "toggle4":
+		chars = strings.Split("■□▪▫", "")
+	case "toggle5":
+		chars = strings.Split("▮▯", "")
+	case "toggle6":
+		chars = strings.Split("⦾⦿", "")
+	case "toggle7":
+		chars = strings.Split("◍◌", "")
+	case "toggle8":
+		chars = strings.Split("◉◎", "")
+	case "toggle9":
+		chars = strings.Split("㊂㊀㊁", "")
+	case "toggle10":
+		chars = strings.Split("⧇⧆", "")
+	case "toggle11":
+		chars = strings.Split("=*-", "")
+	case "bell":
+		chars = strings.Split("☗☖", "")
 	case "dqpb":
 		chars = strings.Split("dqpb", "")
 	case "clock":
@@ -143,7 +174,7 @@ func (s *spinner) Start() {
 }
 
 func (s *spinner) eraseLine() {
-	fmt.Print("\r\033[K") // Erases line
+	fmt.Print("\r\033[K")
 }
 
 func (s *spinner) animate() {
