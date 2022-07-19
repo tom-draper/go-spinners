@@ -1,4 +1,4 @@
-package main
+package github.com/tom-draper/go-spinners
 
 import (
 	"fmt"

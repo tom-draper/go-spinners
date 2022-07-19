@@ -1,8 +1,8 @@
 package examples
 
-import gs "github.com/tom-draper/go-spinners"
+import spinners "github.com/tom-draper/go-spinners"
 
 func main() {
-	s := gs.Spinner()
+	s := spinners.Spinner()
 	s.Start()
 }
