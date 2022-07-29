@@ -134,12 +134,10 @@ func chars(name string) []string {
 	case "toggle7":
 		chars = strings.Split("◍◌", "")
 	case "toggle8":
-		chars = strings.Split("◉◎", "")
-	case "toggle9":
 		chars = strings.Split("㊂㊀㊁", "")
-	case "toggle10":
+	case "toggle9":
 		chars = strings.Split("⧇⧆", "")
-	case "toggle11":
+	case "toggle10":
 		chars = strings.Split("=*-", "")
 	case "bell":
 		chars = strings.Split("☗☖", "")
