@@ -39,7 +39,7 @@ s.Stop()
 The animation speed can be modified using the <code>SetDelay</code> function. The default delay is 100 milliseconds.
 
 ```go
-s := spinners.Spinner("flip")
+s := spinners.Spinner("dots2")
 s.SetDelay(time.Millisecond * 500)
 s.Start()
 time.Sleep(time.Second * 5) // Perform computation
