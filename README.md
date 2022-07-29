@@ -11,10 +11,16 @@ go get github.com/tom-draper/go-spinners
 
 ## Usage
 
+Import the package into your project.
+
+```go
+import spinners "github.com/tom-draper/go-spinners"
+```
+
 Create a spinner with the <code>Spinner</code> function, passing in the name of the spinner.
 
 ```go
-s := Spinner("line")
+s := spinners.Spinner("line")
 s.Start()
 time.Sleep(time.Second * 5) // Perform computation
 s.Stop()
@@ -23,7 +29,7 @@ s.Stop()
 Prefix text can be specified with <code>SetPrefix</code> to appear before the spinner animation. Similarly, a postfix can be set with <code>SetPostfix</code>.
 
 ```go
-s := Spinner("flip")
+s := spinners.Spinner("flip")
 s.Start()
 s.SetPrefix("Loading")
 time.Sleep(time.Second * 5) // Perform computation
@@ -33,7 +39,7 @@ s.Stop()
 The animation speed can be modified using the <code>SetDelay</code> function. The default delay is 100 milliseconds.
 
 ```go
-s := Spinner("flip")
+s := spinners.Spinner("flip")
 s.SetDelay(time.Millisecond * 500)
 s.Start()
 time.Sleep(time.Second * 5) // Perform computation
