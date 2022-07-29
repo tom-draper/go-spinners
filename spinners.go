@@ -206,7 +206,7 @@ func (s *spinner) animate() {
 				s.mu.Lock()
 				fmt.Print("\033[?25l") // Hides cursor
 				s.eraseLine()
-				fmt.Printf("%s %s %s", s.prefix, s.chars[i], s.postfix) // Print
+				fmt.Printf("%s%s%s", s.prefix, s.chars[i], s.postfix) // Print
 				delay := s.delay
 				s.mu.Unlock()
 				time.Sleep(delay)
@@ -230,13 +230,13 @@ func (s *spinner) SetDelay(delay time.Duration) {
 
 func (s *spinner) SetPrefix(prefix string) {
 	s.mu.Lock()
-	s.prefix = prefix
+	s.prefix = prefix + " "
 	s.mu.Unlock()
 }
 
 func (s *spinner) SetPostfix(postfix string) {
 	s.mu.Lock()
-	s.postfix = postfix
+	s.postfix = " " + postfix
 	s.mu.Unlock()
 }
 

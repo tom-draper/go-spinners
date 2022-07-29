@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"time"
 
 	spinners "github.com/tom-draper/go-spinners"
@@ -16,7 +17,8 @@ var SpinnerNames = []string{"dots1", "dots2", "dots3", "dots4", "dots5", "dots6"
 	"toggle8", "toggle9", "toggle10", "toggle11", "dqpb", "clock", "earth", "moon",
 	"runner", "pong", "shark"}
 
-func main() {
+func demoSpinners() {
+	fmt.Println()
 	s := spinners.Spinner("")
 	s.Start()
 	for _, name := range SpinnerNames {
@@ -25,4 +27,8 @@ func main() {
 		time.Sleep(time.Second * 2)
 	}
 	s.Stop()
+}
+
+func main() {
+	demoSpinners()
 }
